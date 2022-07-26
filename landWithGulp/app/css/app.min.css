@@ -27,7 +27,7 @@
   position: relative
 }
 .general__border {
-  border-bottom: 1px solid #ffffff17
+  border-bottom: 1px solid rgba(255,255,255,.0901960784)
 }
 .footnoteLink {
   font-family: Poppins-Medium;
@@ -413,7 +413,7 @@
 }
 .table__cell {
   padding: 12px 23px;
-  border-bottom: 1px solid #8081883a
+  border-bottom: 1px solid rgba(128,129,136,.2274509804)
 }
 .table__cell:first-child {
   padding-left: 21px
