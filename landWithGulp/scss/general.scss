@@ -1,0 +1,45 @@
+@font-face {
+	font-family:"Poppins-Medium";
+	font-style: normal;
+	src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family:"Inter-Medium";
+	font-style: normal;
+	src: url("../fonts/Inter-Medium.ttf") format("truetype");
+}
+@font-face {
+	font-family:"Inter-ExtraLight";
+	font-style: normal;
+	src: url("../fonts/Inter-ExtraLight.ttf") format("truetype");
+}
+* {
+	box-sizing: border-box;
+	font-family:"Inter-Medium";
+	font-size: 16px;
+	margin: 0;
+	
+}
+.general {
+	background: url("../images/src/backMain.png") no-repeat;
+	background-size: cover;
+	color: #EEEEEE;
+	position: relative;
+
+	&__border {
+		border-bottom: 1px solid #ffffff17;
+	}
+}
+
+.footnoteLink {
+	font-family:"Poppins-Medium";
+	font-weight: 600;
+	font-size: 14px;
+	color: #0432DF;
+	text-decoration: underline;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,122 @@
+.category {
+    padding: 60px 101px;
+
+    &__title {
+        font-family:"Poppins-Medium";
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 45px;
+        letter-spacing: -0.02em;
+        color: #020D37;
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 45px 60px 40px;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+    @media screen and (max-width: $mobile-width) {
+        padding: 40px 16px 40px;
+
+        &__title {
+            font-size: 20px;
+        }
+    }
+}
+
+.categoryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    margin-bottom: 20px;
+
+    &__item {        
+        cursor: pointer;
+        color: #EEEEEE;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.05em;
+        text-decoration: none;
+        position: relative;
+        height: 117px;
+        width: 157px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex: 1 1 calc((100%/6) - 20px);
+
+        &_musical {
+            background-image: url("../images/src/musical.jpg");
+        }
+
+        &_industrial {
+            background-image: url("../images/src/Industrial.jpg");
+        }
+
+        &_movie {
+            background-image: url("../images/src/Moviesounds.jpg");  
+        }
+
+        &_animal {
+            background-image: url("../images/src/Animal.jpg"); 
+        }
+
+        &_people {
+            background-image: url("../images/src/People.jpg"); 
+        }
+
+        &_vehicles {
+            background-image: url("../images/src/Vehicles.jpg"); 
+        }
+
+        &_sound {
+            background-image: url("../images/src/Sound.jpg"); 
+        }
+
+        &_emergency {
+            background-image: url("../images/src/Emergency.jpg"); 
+        }
+
+        &_bell {
+            background-image: url("../images/src/Bell.jpg"); 
+        }
+
+        &_nature {
+            background-image: url("../images/src/Nature.jpg"); 
+        }
+
+        &_cartoon {
+            background-image: url("../images/src/Cartoon.jpg"); 
+        }
+
+        &_horror {
+            background-image: url("../images/src/Horror.jpg"); 
+        }
+    }
+
+    @media screen and (max-width: $table-width) {
+        gap: 12px 16px;
+        margin-bottom: 15px;
+
+        &__item {
+            height: 90px;
+            flex: 1 1 calc((100%/4) - 16px);
+        }
+    }
+    @media screen and (max-width: $mobile-width) {
+        gap: 10px;
+        margin-bottom: 16px;
+
+        &__item {
+            height: 70px;
+            flex: 1 1 calc((100%/2) - 10px);
+        }
+    }
+}

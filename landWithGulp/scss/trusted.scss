@@ -1,0 +1,89 @@
+.trusted {
+    padding: 50px 104px 60px;
+    background: #FAFAFA;
+
+    @media screen and (max-width: $mobile-width) {
+        padding: 20px 17px 50px;
+    }
+
+    &__title {
+        font-family:"Poppins-Medium";
+        font-weight: 600;
+        font-size: 20px;
+        color: #020D37;
+        margin-bottom: 35px;
+        text-align: center;
+        letter-spacing: -0.02em;
+
+        @media screen and (max-width: $mobile-width) {
+            font-size: 18px;
+            letter-spacing: -0.05em;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: $table-width) {
+            & {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: $mobile-width) {
+            & {
+                flex-wrap: wrap;
+                gap: 30px 20px;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+    }
+
+    &__icon {
+        margin: auto 89px auto 0;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: $table-width) {
+            & {
+                margin: auto 40px auto 0;
+            
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &_square {
+                width: 40px;
+            }
+            &_beast {
+                width: 62px;
+            }
+            &_netflix {
+                width: 80px;
+            }
+            &_pixar {
+                width: 90px;
+            }
+        }
+
+        @media screen and (max-width: $mobile-width) {
+            & { 
+                flex: 0 0 auto;
+                margin: auto 0;
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+    
+}

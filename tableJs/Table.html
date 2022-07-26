@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+.main {
+  font-family: "Roboto-Regular";
+}
+img {
+  display: inline-block;
+}
+.container {
+  padding: 50px 40px;
+}
+.container__header {
+  margin-bottom: 34px;
+}
+.container__form {
+  display: flex;
+}
+.btn {
+  cursor: pointer;
+  display: flex;
+  padding: 10px 19px;
+  border-radius: 4px;
+  font-family: "Poppins-Regular";
+  border: none;
+  background: #242731;
+  color:#FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 24px;
+  font-weight: 500;
+}
+.btn__img {
+  margin-right: 11px;
+}
+.inp {
+  flex: 1 1 auto;
+  padding: 5px 50px;
+  border: none;
+  border-bottom: solid 1px #D4D4D4;
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #9A9EA5;
+  background-image: url("./img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+}
+.product {
+  font-weight: 400;
+  color: #242731;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border: solid 1px #D4D4D4;
+  border-radius: 8px;
+  border-collapse: collapse;
+}
+.product__header {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #575F6E;
+  padding: 18px 27px;
+  background:#F7F7F8
+}
+.product__headerCell {
+  padding: 18px 27px;
+}
+.product__bogyCell {
+  height: 60px;
+}
+</style>
+<div class="main">
+  <div class="container">
+    <div class="container__header">
+      <form class="container__form">
+        <button class="btn" id="submit">
+          <img class="btn__img" src="./img/submit.svg">
+          Submit</button>
+        <input placeholder="Search" class="inp" value="" id="search">
+      </form>
+    </div>  
+    <div class="container__table">
+      <table class="product">
+        <thead>
+          <tr class="product__header">
+            <th class="product__headerCell">Id</th>
+            <th class="product__headerCell">Title</th>
+            <th class="product__headerCell">Content</th>
+          </tr>
+        </thead>
+        <tbody class="product__body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="./alert.js"></script>
+</body>
+</html>

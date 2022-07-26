@@ -1,0 +1,280 @@
+ /* -------------------- General -------------------- */
+ @font-face {
+    font-family:"Roboto-Regular";
+    font-style: normal;
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family:"Roboto-Regular";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family:"sfns-display-bold";
+    font-style: bold;
+    src: url("../fonts/sfns-display-bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family:"cabin";
+    font-style: bold;
+    src: url("../fonts/cabin.ttf") format("truetype");
+  }           
+  * {
+      box-sizing: border-box;
+  }
+  body {
+      margin: 0;
+      font-family: "open-sans-condensed-2";
+  }
+  /* -------------------- Main -------------------- */
+  .mainTitle {
+      position: relative;
+      font-family: "sfns-display-bold";
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 52px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      z-index: 1;
+  }
+  .mainTitle_black {
+      color: #18283B;
+  }
+  .mainTitle_white {
+      color: #FFFFFF;
+  }
+
+  .mainDesc {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 23px;
+      text-align: center;
+      align-items: center;
+      letter-spacing: 0.05em;
+      margin-bottom: 40px;
+  }
+  .mainDesc_black {
+      color: #626D79;
+  }
+  .mainDesc_white {
+      color: #FFFFFF;
+  }
+
+  .mainItemTitle {
+    font-family: "sfns-display-bold";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #18283B;
+    margin-bottom: 13px;
+}
+.mainItemText {    
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    color: #626D79;
+    margin-bottom: 13px;
+}
+.shadow {
+    position: relative;
+    margin-bottom: 13px;
+}
+.shadow__title {
+    position: absolute;
+    font-family: "cabin";
+    font-weight: bold;
+    font-size: 82px;
+    line-height: 120px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    top: -45px;
+    z-index: 0;
+    color: #F2F2F2;
+}
+.shadow__title_RGBA {
+    color: rgba(242, 242, 242, 0.2);
+}
+  /* -------------------- Banner -------------------- */
+  .banner {
+      margin: 0 auto;
+      max-width: 1620px;
+      height: 767px;
+      padding-left: 111px;
+      padding-top: 242px;
+      background: url("/project/html_test/img/ea266d63d6937f13df330c9aaebdfe11.png") no-repeat #F8FFFF right bottom;
+      background-size: contain;
+      margin-bottom: 127px;
+  }
+  .bannerTitle {
+      font-family: "Roboto-Regular";
+      font-size: 55px;
+      line-height: 80px;
+      text-transform: capitalize;
+      color:#1BCBBF;;
+      margin-bottom: 13px;
+  }
+  .bannerSubTitle {
+      font-family: "Roboto-Regular";
+      font-size: 70px;
+      font-weight: 500;
+      line-height: 80px;
+      text-transform: uppercase;
+      color: #FF0000;
+      margin-bottom: 69px;
+  }
+  .bannerDescription {
+      max-width: 566px;
+      font-family: "Nunito";
+      font-size: 17px;
+      line-height: 25px;
+      color: #333333;
+  }
+
+  /* -------------------- Chung -------------------- */
+  .chung {
+    margin: 0 auto;
+    max-width: 1125px
+  }
+  .chungList {
+      margin: 0 auto;
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .chungList__Item {
+    margin: 0 0 30px;
+    padding: 0 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.33333333333333333333333%;
+    margin-bottom: 29px;
+  }
+  
+  
+
+  /* -------------------- Carousel -------------------- */
+  .carousel {
+      background-image: url("/project/html_test/img/town.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 100px;
+      padding-bottom: 154px;
+      margin: 0 auto;
+  }
+
+  .carouselPage {
+      position: relative;
+      max-width: 1620px;
+      margin: 0 auto;
+  }
+  .carouselPage__cursor {
+      position: absolute;
+      top: 166px;
+      cursor: pointer;
+      border: none;
+      background: none;
+  }
+  .carouselPage__cursor_left {
+      left: 48px;
+  }
+  .carouselPage__cursor_right {
+      right: 48px;
+  }
+  
+  .carouselList {
+    justify-content: center;
+    display: flex;
+    padding: 0px 69px;
+}
+  .carouselList__item {
+      background-color: #FFFFFF;
+      text-align: center;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 33.33333333333%;
+      margin-right: 30px;
+      max-width: 430px;
+      height: 415px;
+      padding-top: 55px;
+  }
+  .carouselList__item:last-child {
+      margin-right: 0;
+  }
+  .carouselList__item_indicator {
+      display:none;
+      background-color: #FFFFFF;
+      padding: 18px 0px 20px;
+      border-top: 1px solid #FF0000;;
+  }
+  .carouselList__item_indicator:before {
+      content: '';
+  }
+  .carouselList__item:hover .carouselList__item_indicator {
+      display:block;
+  }
+  .carouselList__logo {
+      margin-bottom: 39px;
+      min-height: 151px;
+  }
+  /* -------------------- khach -------------------- */
+  .khach {
+      background-color: #FF0000;
+      background-size: cover;
+      padding-top: 130px;
+      padding-bottom: 124px;
+  }
+  .khachList {
+      display: flex;
+      justify-content: center;
+     
+  }
+  .khachList__Item {
+      margin-right: 115px;
+  }
+  .khachList__Item:last-child {
+      margin-right: 0;
+  }
+
+
+  /* -------------------- map -------------------- */
+  .map {
+      font-family: "Nunito";
+      line-height: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: url("/project/html_test/img/MAP.png");
+      background-size: cover;
+      padding: 126px 295px;
+  }
+    .map__title {
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 52px;
+    }
+    .map__text {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.64);
+    }
+  .mapBox {
+      padding: 40px 0px;
+      background: #FFFFFF;
+      text-align: center;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+ 
+  .mapBox__Item {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+  }
+  .mapBox__Item:last-child {
+      margin-bottom: 0px;
+  }
+  .mapBox__Item_icon {
+      margin-right: 32px;
+  }

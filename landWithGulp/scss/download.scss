@@ -1,0 +1,195 @@
+.download {
+    padding: 65px 200px 69px;
+    color: #FFFFFF;
+    background: #0432DF;
+
+    &__title {
+        font-family:"Poppins-Medium";
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 146.5%;
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 189%;
+        letter-spacing: -0.05em;
+        margin-bottom: 43px;
+        text-align: center;
+    }
+
+    &__menu {
+        display: flex;
+        margin-bottom: 39px;
+        justify-content: center;
+    }
+
+    &__footer {
+        text-align: center;
+        font-size: 18px;
+        line-height: 189%;
+        letter-spacing: -0.05em;
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 60px 84px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 45px;
+            margin-bottom: 12px;
+        }
+
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+
+        &__menu {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (max-width: $mobile-width) {
+        padding: 50px 17px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 160%;
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 180%;
+            margin-bottom: 40px;
+        }
+
+        &__menu {
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        &__footer {
+            font-size: 16px;
+            line-height: 180%;
+        }
+    }
+}
+
+.downloadItem {
+    padding: 26px 34px 40px;
+    border: 1px solid #CDD6F9;
+    border-radius: 12px;
+    flex: 1 1 100%;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &_active {
+        background: #1B4BFF;
+        border: 1px solid #1B4BFF;
+    }
+
+    &__title {
+        font-family:"Poppins-Medium";
+        margin-bottom: 13px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 45px;
+        letter-spacing: -0.02em;
+    }
+
+    &__desc {
+        margin-bottom: 56px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 172%;
+        letter-spacing: -0.05em;
+    }
+
+    &__wrapper {
+        margin-top: auto;
+    }
+
+    &__footer {
+        margin-bottom: 17px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 170%;
+        letter-spacing: -0.05em;
+    }
+
+    &__button {
+        padding: 12px 24px;
+        font-family:"Poppins-Medium";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        background: none;
+        border: 2px solid #FFFFFF;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+
+    &__button_active {
+        background: #FFFFFF;
+        color: #0432DF;
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 34px 29px 42px;
+
+        &__title {
+            font-size: 24px;
+            line-height: 38px;
+        }
+
+        &__desc {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 45px;
+        }
+
+        &__footer {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 31px;
+        }
+
+        &__button {
+            padding: 9px 20px;
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: $mobile-width) {
+        padding: 24px 30px 38px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+
+        &__title {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 16px;
+        }
+
+        &__desc {
+            margin-bottom: 39px;
+        }
+
+        &__footer {
+            margin-bottom: 14px;
+        }  
+    }
+}

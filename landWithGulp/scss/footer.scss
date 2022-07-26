@@ -1,0 +1,123 @@
+.footer {
+    padding: 51px 90px;
+    background: #020D37;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        width: 244px;
+        margin: auto 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 0px 152px;
+        margin: auto 0;
+    }
+
+    &__logo {
+        width: 170px;
+        margin-bottom: 25px;
+    }
+
+    &__desc {
+        font-weight: 400;
+        line-height: 180%;
+        letter-spacing: -0.05em;
+        color: #ACAFB8;
+        margin-bottom: 30px;
+    }
+
+    &__inc {
+        font-size: 14px;
+        line-height: 172%;
+        color: #ACAFB8;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px 0px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 172%;
+        letter-spacing: -0.05em;
+        color: #EEEEEE;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        letter-spacing: -0.05em;
+        color: #ACAFB8;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: #f4f5f8;
+        }
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 40px 60px;
+        display: block;
+
+        &__info {
+            margin-bottom: 40px;
+            width: 259px;
+        }
+
+        &__logo {
+            width: 142px;
+        }
+
+        &__desc {
+            font-size: 14px;
+            line-height: 172%;
+            margin-bottom: 20px;
+        }
+
+        &__inc {
+            font-weight: 400;
+        }
+
+        &__wrapper {
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 138%;
+        }
+
+        &__link {
+            font-size: 14px;
+            line-height: 172%;
+        }
+    }
+
+    @media screen and (max-width: $mobile-width) {
+        padding: 50px 16px;
+
+        &__desc {
+            margin-bottom: 16px;
+        }
+
+        &__info {
+            margin-bottom: 34px;
+        }
+
+        &__wrapper {
+            flex-wrap: wrap;
+            gap: 34px 0px;
+        }
+
+        &__item {
+            width: 50%;
+        }
+    }
+}

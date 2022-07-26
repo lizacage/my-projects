@@ -1,0 +1,88 @@
+.header {
+	display: flex;
+	padding-bottom: 15px;
+	padding: 20px 100px 15px;
+
+	&__logo {
+		margin: auto 0px;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+
+	&__menu {
+		padding: 10px;
+		margin-right: 43px;
+		display: flex;
+	}
+
+	&__link {
+		font-family:"Inter-Medium";
+		text-decoration: none;
+		border: none;
+		padding: 0px;
+		background: none;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: -0.01em;
+		color: #FFFFFF;
+		cursor: pointer;
+		opacity: 0.6;
+		margin-right: 36px;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+		&_active {
+			opacity: 1;
+		}
+	}
+
+	&__login {
+		display: block;
+	}
+
+	&__loginButton {
+		background: #0432DF;
+		border: 1px solid #0432DF;
+		border-radius: 8px;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: -0.01em;
+		color: #FFFFFF;
+		cursor: pointer;
+		padding: 10px 20px;
+	}
+
+	&__menu_mobile {
+		display: none;
+	}
+
+	@media screen and (max-width: $table-width) {
+		padding: 10px 60px;
+
+		&__link, &__login {
+			display: none;
+		}
+		&__menu_mobile {
+			padding: 0px;
+			display: block;
+			cursor: pointer;
+			background: none;
+			border: none;
+			}
+			
+	}
+	@media screen and (max-width: $mobile-width) {
+		padding: 10px 16px;
+
+		&__menu_image {
+			width: 40px;	
+		}
+	}
+}

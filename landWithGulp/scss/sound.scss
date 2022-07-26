@@ -1,0 +1,231 @@
+.sound {
+    padding: 80px 100px 60px;
+    background: #FFFFFF;
+    color: #020D37;
+
+    &__title {
+        font-family:"Poppins-Medium";
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 46px;
+    }
+
+    &__link {
+        margin-right: 28px;
+        color: #4C526A;
+        text-decoration: none;
+
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &:hover {
+            color: #020D37;
+            text-decoration: underline;
+        }
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 50px 60px 45px;
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+        	
+    }
+    @media screen and (max-width: $mobile-width) {
+        padding: 50px 16px 40px;
+        
+        &__title {
+            font-size: 20px;
+        }
+
+        &__link {
+            font-size: 14px;
+            margin-right: 12px;
+
+            &:nth-last-child(-n+3) {
+                display: none;
+            }
+        }
+    }
+}
+    
+.container {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    background: #F1F1F1;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: start;
+
+    &__filter {
+        color: #4C526A;    
+    }
+
+    &__icon {
+        position: absolute;
+        right: 20px;
+        top: 13px;
+    }
+
+    @media screen and (max-width: $table-width) {
+        padding: 10px 12px;
+        width: 101px;
+        font-size: 14px;
+
+        &__filter {
+            font-size: 14px;
+        }	
+    }
+    @media screen and (max-width: $mobile-width) {
+        width: 36px;
+        height: 36px;
+
+        &__filter {
+            display: none;
+        }
+
+        &__icon {
+            right: 7px;
+            top: 11px;
+        }
+    }
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__cell {
+        padding: 12px 23px;
+        border-bottom: 1px solid #8081883a;
+
+        &:first-child {
+            padding-left: 21px;
+        }
+
+        &:last-child {
+            padding-right: 0px;
+        }
+
+        &_sound {
+            min-width: 189px;
+        }
+
+        &_desc, &_text {
+            min-width: 251px;
+        }
+    }
+
+    &__play {
+        cursor: pointer;
+        border: none;
+        background: none;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    &__track {
+        text-decoration: none;
+        margin-bottom: 2px;
+        color: #020D37;
+        
+        &:visited {
+            color: #020D37;
+        }
+    }
+
+    &__time {
+        font-weight: 400;
+        font-size: 12px;
+        color: #4C526A;
+    }
+
+    &__desc {
+        color: #4C526A;
+    }
+
+    &__text {
+        color: #4C526A;
+        min-width: 212px;
+    }
+
+    &__item {
+        cursor: pointer;
+        border: none;
+        background: none;
+        margin-right: 26px;
+        
+        &:first-child { 
+            .table__item_on {
+                display: none;
+            }
+
+            &:hover {
+                .table__item_on {
+                    display: block;
+                }
+                .table__item_off {
+                    display: none;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__flexContainer {
+        display: flex;
+    }
+
+    @media screen and (max-width: $table-width) {
+        &__cell_desc, &__cell_text {
+            display: none;
+        }
+
+        &__track {
+            font-size: 14px;
+        }
+        
+        &__desc {
+            display: none;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: $mobile-width) {
+        &__cell_sound {
+            min-width: 130px;
+        }	
+
+        &__text {
+            display: none;
+        }
+
+        &__item:first-child {
+            display: none;
+        }
+    }
+}
+
+
+
