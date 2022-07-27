@@ -1,0 +1,17 @@
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 3px dashed purple;
+    margin: 50px auto 0px;
+    animation: rotate 3s infinite ease-in;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(2.4);
+    }
+}
