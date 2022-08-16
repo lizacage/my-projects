@@ -1,0 +1,71 @@
+<div 
+    *ngIf="planet" class="box-border py-4 px-6 border rounded items-center flex-col mb-2 mt-20 bg-purple-medium text-white"
+>
+    <div class="flex mt-10 flex justify-between mx-auto">
+        <div class="flex justify-center items-center">
+            <img src="../../../assets/img/{{imgID}}.png" alt="PlanetExample.name" class="w-1/2 mb-2">  
+        </div>
+        <div class=" text-center mr-20">
+            <h2 class="mb-2 text-md text-2xl">{{ planet.name }}</h2>
+            <p>Rotation period: <span class="font-bold">{{planet.rotation_period}}</span></p>
+            <p> Orbital period: {{planet.orbital_period}} </p>
+            <p> Diameter of: {{ planet.name }} {{planet.diameter}}</p>
+            <p> Climate: {{planet.climate}}</p>
+            <p> Gravity: {{planet.gravity}}</p>
+            <p> Terrain: {{planet.terrain}}</p>
+            <p> Surface water: {{planet.surface_water}}</p>
+            <p> Population: {{planet.population}}</p>
+        </div>
+    </div>
+    <div class="text-center text-xl mt-5 mb-3">
+        RESIDENTS
+            <span 
+                *ngIf="planet.residents.length == 0"
+                class="text-center mt-5 mb-3 text-xl"
+            >
+                ARE ABSENT
+            </span>
+    </div>
+    <div class="ml-15" *ngIf="planet.residents.length"> Filter
+        <select [(ngModel)]="term"  class="text-purple-dark">
+            <option>none</option>
+            <option>male</option>
+            <option>female</option>
+            <option>n/a</option>
+        </select>
+    </div>
+    <table
+        *ngIf="planet.residents.length"
+        class="border-collapse w-full text-xs text-center"
+    >
+        <thead
+            class="text-xs uppercase"
+        > 
+            <tr>
+                <th class="py-4 px-4">Name</th>
+                <th class="py-4 px-4">Height</th>
+                <th class="py-4 px-4">Mass</th>
+                <th class="py-4 px-4">Hair color</th>
+                <th class="py-4 px-4">Skin color</th>
+                <th class="py-4 px-4">Eye color</th>
+                <th class="py-4 px-4">Birth year</th>
+                <th class="py-4 px-4">Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let resident of planet.residents| filterGender:term"
+                class="border-b"
+            >
+                <td class="py-4 px-4">{{ resident.name }}</td>
+                <td class="py-4 px-4">{{ resident.height }}</td>
+                <td class="py-4 px-4">{{ resident.mass }}</td>
+                <td class="py-4 px-4">{{ resident.hair_color }}</td>
+                <td class="py-4 px-4">{{ resident.skin_color }}</td>
+                <td class="py-4 px-4">{{ resident.eye_color }}</td>
+                <td class="py-4 px-4">{{ resident.birth_year }}</td>
+                <td class="py-4 px-4">{{ resident.gender }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

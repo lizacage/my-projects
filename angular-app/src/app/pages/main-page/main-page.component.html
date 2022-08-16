@@ -1,0 +1,16 @@
+<p *ngIf="loading" class="text-white text-center text-lg">Loading....</p>
+<div *ngIf="!loading">
+    <app-planet 
+        *ngFor="let planet of planetListService.response?.results"
+        [PlanetExample]="planet"
+        class="text-white"
+    ></app-planet>
+</div>
+<div *ngIf="planetListService.response" class="text-white flex justify-between">
+    <button class="py-2 px-4 rounded bg-blue-medium"
+        [disabled]="!planetListService.response.previous" (click)="onPrev()"
+    >Prev</button>
+    <button class="py-2 px-4 rounded bg-blue-medium"
+        [disabled]="!planetListService.response.next" (click)="onNext()"
+    >Next</button>
+</div>
