@@ -1,0 +1,17 @@
+<div 
+    *ngIf="resident" class="py-4 px-6 border rounded flex items-center flex-col mb-6 relative bg-purple-medium"
+>
+    <h1 class="mb-2 text-md text-center text-2xl">
+        <img  class="m-auto w-36" [src]="avatarUrl">
+        <a routerLink="/residentPage" [queryParams]="{ url: resident.url }">
+            {{ resident.name }}
+        </a>
+    </h1>
+    <p>Height: {{resident.height}}</p>
+    <p>Mass: {{resident.mass}} </p>
+    <p>Hair-color: {{resident.hair_color}}</p>
+    <p>Skin-color: {{resident.skin_color}}</p>
+    <p>Eye-color: {{resident.eye_color}}</p>
+    <p>Birth-year: {{resident.birth_year}}</p>
+    <p>Gender: {{resident.gender}}</p>                                                         
+</div>

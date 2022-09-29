@@ -9,7 +9,8 @@ module.exports = {
         'purple-medium': '#453057',
         'blue-light': '#0cb7fa',
         'blue-medium': '#1b75e3',
-        'white': '#ffffff'
+        'white': '#ffffff',
+        'gray': '#333333'
       },
       backgroundImage: {
         'bg-space': "url('./assets/img/bg.jpg')"

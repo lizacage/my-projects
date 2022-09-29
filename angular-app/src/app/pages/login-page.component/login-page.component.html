@@ -1,0 +1,17 @@
+<h1 class="text-center text-white text-2xl mb-5">AUTHORIZATION</h1>
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-6 relative bg-purple-medium">
+    <form (submit)="login()">
+        <div>
+            <label class="block mb-1 text-white">Your name</label>
+            <input class="mb-5" placeholder="username" name="username" [(ngModel)]="username">
+        </div>
+        <div>
+            <label class="block mb-1 text-white">Your password</label>
+            <input class="mb-5" placeholder="password" name="password" type="password" [(ngModel)]="password">
+        </div>
+        <button 
+            type="submit"
+            class="text-white py-2 px-4 rounded bg-blue-medium m-auto mb-5"
+        >LOGIN</button>
+    </form>
+</div>

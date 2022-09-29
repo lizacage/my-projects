@@ -1,6 +1,12 @@
+<p *ngIf="loading" class="text-white text-center text-lg">Loading....</p>
 <div 
-    *ngIf="planet" class="box-border py-4 px-6 border rounded items-center flex-col mb-2 mt-20 bg-purple-medium text-white"
+    *ngIf="planet && !loading" class="box-border py-4 px-6 border rounded items-center flex-col mb-2 bg-purple-medium text-white"
 >
+    <button 
+        routerLink=""
+        class="py-2 px-4 rounded bg-blue-medium"
+    >	
+        &#10094; On the main</button>
     <div class="flex mt-10 flex justify-between mx-auto">
         <div class="flex justify-center items-center">
             <img src="../../../assets/img/{{imgID}}.png" alt="PlanetExample.name" class="w-1/2 mb-2">  
@@ -18,7 +24,7 @@
         </div>
     </div>
     <div class="text-center text-xl mt-5 mb-3">
-        RESIDENTS
+        <a routerLink="/residents">RESIDENTS</a>
             <span 
                 *ngIf="planet.residents.length == 0"
                 class="text-center mt-5 mb-3 text-xl"
@@ -56,7 +62,9 @@
             <tr *ngFor="let resident of planet.residents| filterGender:term"
                 class="border-b"
             >
-                <td class="py-4 px-4">{{ resident.name }}</td>
+                <td bold class="py-4 px-4">
+                    <a  routerLink="/residentPage" [queryParams]="{ url: resident.url }">{{ resident.name }}</a>    
+                </td>
                 <td class="py-4 px-4">{{ resident.height }}</td>
                 <td class="py-4 px-4">{{ resident.mass }}</td>
                 <td class="py-4 px-4">{{ resident.hair_color }}</td>

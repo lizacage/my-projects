@@ -12,6 +12,7 @@ export class PlanetPageComponent {
     planet?: IPlanetWithResident
     term: 'male' | 'female' | 'n/a' | 'none' = 'none'
     @Input() PlanetComponent?: any
+    loading = false
     
     
     constructor(
@@ -19,11 +20,13 @@ export class PlanetPageComponent {
         private route: ActivatedRoute
     ) {}
     
-    imgID = Math.floor(Math.random() * (6 - 1)) + 1;
+    imgID = Math.floor(Math.random() * 5) + 1;
     ngOnInit(): void {
         this.route.queryParams.subscribe(params => {
+            this.loading = true
             this.planetListService.getPlanetWithResidents(params.url).subscribe((planet) => {
                 this.planet = planet
+                this.loading = false
             })
         })
     }

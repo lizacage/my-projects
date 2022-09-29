@@ -1,9 +1,20 @@
-<div class="absolute top-0 right-0 px-5 left-0 h-[50px] 
-    text-center text-white bg-gradient-to-r from-blue-medium to-blue-light"
+<div *ngIf="authService.logIn" class="absolute top-0 right-0 px-5 left-0 h-[31px] 
+    text-center text-white bg-gradient-to-r from-gray to-blue-light"
 >
+    <span>
+        Logged in
+    </span>
+    <button (click)="authService.logout()" class="py-1 px-2 rounded bg-blue-medium">
+        Log Out
+    </button>
+</div>
+
+<div class="absolute top-[31px] right-0 px-5 left-0 h-[50px] 
+    text-center text-white bg-gradient-to-r from-blue-medium to-blue-light"
+> 
     <h1 class="mt-2 text-3xl">STAR WARS</h1>
 </div>
-<div class="bg-bg-space bg-no-repeat bg-cover min-h-[100%]">
+<div class="bg-bg-space bg-no-repeat bg-cover min-h-[100%] mt-3">
     <div class="max-w-3xl container mx-auto pt-20 bg-purple-medium'">
         <router-outlet></router-outlet>
     </div>

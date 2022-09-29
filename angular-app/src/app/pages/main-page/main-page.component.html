@@ -4,7 +4,8 @@
         *ngFor="let planet of planetListService.response?.results"
         [PlanetExample]="planet"
         class="text-white"
-    ></app-planet>
+    >                                                   
+    </app-planet>
 </div>
 <div *ngIf="planetListService.response" class="text-white flex justify-between">
     <button class="py-2 px-4 rounded bg-blue-medium"

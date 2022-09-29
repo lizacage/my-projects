@@ -1,0 +1,44 @@
+<h1 class="text-center text-white text-2xl mb-5">REGISTRATION</h1>
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-6 relative bg-purple-medium">
+    <form
+        [formGroup]="myForm"
+        *ngIf="!isSuccessful"
+        (ngSubmit)="onSubmit()"
+        novalidate
+    >
+        <div>
+            <label for="username" class="block mb-1 text-white">Your name</label>
+            <input 
+                formControlName="username"
+                class="mb-5" type="text"
+                minlength="3"
+                maxlength="20"
+            >
+        </div>
+        <div>
+            <label for="password" class="block mb-1 text-white">Your password</label>
+            <input 
+                formControlName="password"
+                class="mb-5" 
+                minlength="6"
+                type="password"
+            >
+        </div>
+        <button 
+            type="submit"
+            class="py-2 px-4 rounded bg-blue-medium m-auto mb-5"
+        >REGISTER</button>
+    </form>
+    <div class="text-md text-2xl text-white" *ngIf="isSuccessful">
+        <div class="mb-4">
+            Registration is successful
+        </div>
+        <div>
+            <button 
+                routerLink="/login"
+                type="submit"
+                class="py-2 px-4 rounded bg-blue-medium m-auto mb-5 pointer"
+            >Login</button>
+        </div>
+    </div>
+</div>

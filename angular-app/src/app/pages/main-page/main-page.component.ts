@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, ViewChild } from '@angular/core'
+import { PlanetComponent } from 'src/app/components/planet/planet.component';
 import { planetListService } from 'src/app/services/planetList.service'
 
 @Component({
@@ -7,6 +8,12 @@ import { planetListService } from 'src/app/services/planetList.service'
 })
 
 export class MainPageComponent {
+  planetCounter?: PlanetComponent;
+  @ViewChild (PlanetComponent)
+  set viewChildComp(directive: PlanetComponent) {
+    this.planetCounter = directive;
+  }
+  
   loading = false
 
   constructor(
@@ -18,7 +25,7 @@ export class MainPageComponent {
     this.loading = true;
     this.planetListService.getAll().subscribe(() => {
       this.loading = false
-    })
+    });
   }
 
   onNext(): void {

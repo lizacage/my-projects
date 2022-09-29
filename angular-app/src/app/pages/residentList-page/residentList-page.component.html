@@ -1,0 +1,51 @@
+<div class="flex items-center">
+    <div class="text-white mb-3 mr-4">
+        <label class="block mb-1">Name of new resident</label>
+        <input class="text-black" name="name" [(ngModel)]="name">
+    </div>
+    <div class="text-white mb-3 mr-4">
+        <label class="block mb-1">Mass of new resident</label>
+        <input class="text-black" name="mass" [(ngModel)]="mass">
+    </div>
+    <div class="text-white mb-3 mr-4">
+        <label class="block mb-1">Height of new resident</label>
+        <select class="form-control text-black" name="height" [(ngModel)]="height">
+            <option *ngFor="let elem of heightArr" [value]="elem">
+                {{elem}}
+            </option>
+        </select>
+    </div>
+    <div >
+        <button (click)="addResident()" class="py-2 px-4 rounded bg-blue-medium m-auto">Add</button>
+    </div>
+</div>
+<div *ngFor="let residentNew of newResidents; let i = index">
+    <div 
+         class=" text-white py-4 px-6 border rounded flex items-center flex-col mb-6 relative bg-purple-medium"
+         id="residentNew"
+    >
+        <img class="m-auto w-36" src={{residentAvatarNew}}>
+        <h1 class="mb-2 text-md text-center text-2xl">
+            <p>{{ residentNew.name }}</p>
+        </h1>
+        <p>Height: {{residentNew.height}}</p>
+        <p>Mass: {{residentNew.mass}} </p>
+        <button class="py-2 px-4 rounded bg-blue-medium" (click)="deleteResident(i)"
+        >Delete</button>
+    </div>
+</div>
+<p *ngIf="loading" class="text-white text-center text-lg">Loading....</p>
+<div *ngIf="!loading">
+    <app-resident *ngFor="let resident of residentListService.response?.results"
+        [resident]="resident"
+        class="text-white"
+    ></app-resident>
+    <div *ngIf="residentListService.response" class="text-white flex justify-between">
+        <button class="py-2 px-4 rounded bg-blue-medium"
+            [disabled]="!residentListService.response.previous" (click)="onPrev()"
+        >Prev</button>
+        <button class="py-2 px-4 rounded bg-blue-medium"
+            [disabled]="!residentListService.response.next" (click)="onNext()"
+        >Next</button>
+    </div>
+</div>
