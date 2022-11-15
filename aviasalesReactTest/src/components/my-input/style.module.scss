@@ -1,0 +1,49 @@
+.myLabel {
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;;
+}
+
+.myInput {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #B7BAC1;
+    border-radius: 10px;
+    height: 40px;
+    padding: 12px;
+    color: #5C5C5C;
+    position: relative;
+    width: 208px;
+
+    &:hover, &:focus-visible {
+        border: 1px solid #5C87DB;
+        box-shadow: 0px 0px 2px rgba(92, 135, 219, 0.5);
+        outline: none;
+    }
+
+}
+
+.myInput::placeholder {
+    font-size: 14px;
+    color: #B7BAC1;
+}
+
+.myInputDate {
+    padding-left: 34px;
+}
+
+.myInput[type="date"]::-webkit-calendar-picker-indicator {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-image: url("./dateprim.svg");   
+    position: absolute;
+    left: 12px;
+    
+
+    &:hover {
+        background-image: url("./datehover.svg");
+    }
+}

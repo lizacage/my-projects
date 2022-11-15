@@ -1,0 +1,121 @@
+img {
+    display: block;
+}
+
+span {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.mainInfo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.wayInfo {
+    width: 100%;
+    position: relative;
+    margin: auto 40px;
+}
+
+.ticketInfo {
+    padding-top: 40px;
+    flex: 0 0 auto;
+}
+
+.ticketTime {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232323;
+    margin-bottom: 8px;
+}
+
+.ticketDate {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5C5C5C;
+}
+
+.circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    top: -3px;
+}
+
+.circleLeft {
+    left:0px;
+}
+
+.circleRight {
+    right:0px;
+}
+
+.airport {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #B7BAC1;
+    position: absolute;
+    top: -23px;
+}
+
+.airportLeft {
+    left: -8px;
+}
+
+.airportRight {
+    left: -9px;
+}
+
+.timeWay {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #B7BAC1;
+    position: absolute;
+    bottom: -24px;
+    left: 71px;
+}
+
+.ticketBag {
+    margin-right: 20px;
+    margin-left: 33px;
+}
+
+.chooseTimeButton {
+    background: #FFFFFF;
+    border: 1px solid #B7BAC1;
+    border-radius: 10px;
+    height: 34px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    color: #5C5C5C;
+    padding: 0 3px;
+    margin-right: 17px;
+
+    &_active {
+        background: #DDE3EE;
+        height: 40px;
+        font-weight: 500;
+        color: #232323;
+        padding: 0 15px;
+        border: none;
+        outline: none;
+    }
+}
+
+.line {
+    height: 1px;
+    background: #B7BAC1;
+}

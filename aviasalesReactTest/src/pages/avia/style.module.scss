@@ -1,0 +1,32 @@
+.wrapper {
+    max-width: 962px;
+    margin: 68px auto;
+}
+
+.navigation {
+    height: 100px;
+    background: #5C87DB;
+    border-radius: 15px 15px 0px 0px;
+    padding: 17px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.buttonBlock {
+    height: 86px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+    border-radius: 0px 0px 15px 15px;
+    padding: 23px 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.line {
+    border-top:1px dashed #FFFFFF;
+    position: absolute;
+    width: 20px;
+    top: 50%;
+    right: 240px;
+}
